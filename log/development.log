@@ -16,3 +16,273 @@ ActiveRecord::StatementInvalid (Could not find table 'movies'):
   Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.2ms)
   Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
   Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (209.4ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-10-04 16:36:57 -0700
+Connecting to database specified by database.yml
+Served asset /rails.png - 200 OK (77ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-10-04 16:37:02 -0700
+Processing by MoviesController#index as HTML
+Completed 500 Internal Server Error in 17ms
+
+ActiveRecord::StatementInvalid (Could not find table 'movies'):
+  app/controllers/movies_controller.rb:10:in `index'
+
+
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.1ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.3ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (124.7ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-10-04 17:08:29 -0700
+Served asset /rails.png - 200 OK (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-10-04 17:08:35 -0700
+Processing by MoviesController#index as HTML
+Completed 500 Internal Server Error in 11ms
+
+ActiveRecord::StatementInvalid (Could not find table 'movies'):
+  app/controllers/movies_controller.rb:10:in `index'
+
+
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (20.3ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (30.3ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (131.9ms)
+
+
+Started GET "/movie" for 127.0.0.1 at 2013-10-04 17:08:41 -0700
+
+ActionController::RoutingError (No route matches [GET] "/movie"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.14) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/saasbook/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/saasbook/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/saasbook/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2013-10-04 17:11:46 -0700
+Processing by Rails::InfoController#properties as */*
+  Rendered inline template (10.4ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-10-04 17:18:31 -0700
+Processing by MoviesController#index as HTML
+Completed 500 Internal Server Error in 11ms
+
+ActiveRecord::StatementInvalid (Could not find table 'movies'):
+  app/controllers/movies_controller.rb:10:in `index'
+
+
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (16.8ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (23.2ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (131.7ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (16.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (16.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (10.4ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateMovies (20111119180638)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (6.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111119180638')[0m
+  [1m[35m (16.5ms)[0m  commit transaction
+  [1m[36m (0.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-10-04 18:23:57 -0700
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (5.4ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (29.3ms)
+Compiled application.css  (1ms)  (pid 9171)
+Compiled jquery.js  (8ms)  (pid 9171)
+Compiled jquery_ujs.js  (11ms)  (pid 9171)
+Compiled application.js  (322ms)  (pid 9171)
+Completed 200 OK in 1729ms (Views: 1719.6ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 18:24:03 -0700
+Served asset /application.css - 200 OK (71ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 18:24:03 -0700
+Served asset /jquery.js - 200 OK (47ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 18:24:04 -0700
+Served asset /application.js - 200 OK (327ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 18:24:04 -0700
+Served asset /jquery_ujs.js - 200 OK (27ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2013-10-04 18:34:33 -0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (207.1ms)
+Completed 200 OK in 279ms (Views: 277.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2013-10-04 18:34:47 -0700
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IepU7FU+xhmfbfknXxa+1plCxZuG1DG2ZZYbzHvPzL4=", "movie"=>{"title"=>"Django Unchained", "rating"=>"R", "release_date(1i)"=>"2011", "release_date(2i)"=>"10", "release_date(3i)"=>"5"}, "commit"=>"Save Changes"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (94.7ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 05 Oct 2013 01:34:47 UTC +00:00], ["description", nil], ["rating", "R"], ["release_date", Wed, 05 Oct 2011 00:00:00 UTC +00:00], ["title", "Django Unchained"], ["updated_at", Sat, 05 Oct 2013 01:34:47 UTC +00:00]]
+  [1m[35m (20.4ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/movies
+Completed 302 Found in 308ms (ActiveRecord: 115.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-10-04 18:34:47 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (14.9ms)
+Completed 200 OK in 87ms (Views: 82.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2013-10-04 18:35:02 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.7ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/show.html.haml within layouts/application (74.0ms)
+Completed 200 OK in 165ms (Views: 132.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-10-04 18:35:07 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (12.4ms)
+Completed 200 OK in 102ms (Views: 86.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2013-10-04 18:35:09 -0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (178.2ms)
+Completed 200 OK in 244ms (Views: 234.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2013-10-04 18:35:24 -0700
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IepU7FU+xhmfbfknXxa+1plCxZuG1DG2ZZYbzHvPzL4=", "movie"=>{"title"=>"Up", "rating"=>"G", "release_date(1i)"=>"2009", "release_date(2i)"=>"7", "release_date(3i)"=>"6"}, "commit"=>"Save Changes"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (5.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 05 Oct 2013 01:35:24 UTC +00:00], ["description", nil], ["rating", "G"], ["release_date", Mon, 06 Jul 2009 00:00:00 UTC +00:00], ["title", "Up"], ["updated_at", Sat, 05 Oct 2013 01:35:24 UTC +00:00]]
+  [1m[35m (22.7ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/movies
+Completed 302 Found in 49ms (ActiveRecord: 28.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-10-04 18:35:24 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (28.5ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (34.7ms)
+Completed 200 OK in 151ms (Views: 118.9ms | ActiveRecord: 28.5ms)
+
+
+Started GET "/movies/2" for 127.0.0.1 at 2013-10-04 18:35:29 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered movies/show.html.haml within layouts/application (14.6ms)
+Completed 200 OK in 111ms (Views: 87.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-10-04 18:35:34 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (17.0ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (43.2ms)
+Completed 200 OK in 95ms (Views: 74.9ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 18:35:35 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 18:35:35 -0700
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 18:35:35 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 18:35:35 -0700
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2013-10-04 18:35:42 -0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (81.5ms)
+Completed 200 OK in 162ms (Views: 139.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 18:35:42 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 18:35:43 -0700
+Served asset /jquery.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 18:35:43 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 18:35:43 -0700
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2013-10-04 18:37:00 -0700
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IepU7FU+xhmfbfknXxa+1plCxZuG1DG2ZZYbzHvPzL4=", "movie"=>{"title"=>"Unglorious Bastards", "rating"=>"R", "release_date(1i)"=>"2011", "release_date(2i)"=>"5", "release_date(3i)"=>"16"}, "commit"=>"Save Changes"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 05 Oct 2013 01:37:00 UTC +00:00], ["description", nil], ["rating", "R"], ["release_date", Mon, 16 May 2011 00:00:00 UTC +00:00], ["title", "Unglorious Bastards"], ["updated_at", Sat, 05 Oct 2013 01:37:00 UTC +00:00]]
+  [1m[35m (23.1ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/movies
+Completed 302 Found in 49ms (ActiveRecord: 24.8ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-10-04 18:37:00 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (10.1ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (20.6ms)
+Completed 200 OK in 120ms (Views: 103.7ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 18:37:00 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 18:37:00 -0700
+Served asset /jquery.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 18:37:01 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 18:37:01 -0700
+Served asset /application.js - 304 Not Modified (31ms)
