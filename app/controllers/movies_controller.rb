@@ -10,19 +10,34 @@ class MoviesController < ApplicationController
   def index
 #@movies = Movie.all
     @all_ratings = Movie.all_ratings
-    @checked = params[:ratings]
-    if params[:ratings] == nil
+
+    # get saved session states
+    @checked  = session[:ratings]
+    @from     = session[:from]
+    @from     = @from == nil ? "" : @from
+
+    checked = params[:ratings]
+    @checked = checked if checked != nil
+
+    from  = params[:from]
+    from  = from == nil ? "" : from
+    @from = from if from != ""
+
+    # create the hash if its nil
+    if @checked == nil
       @checked = {}
       @all_ratings.each do |rating|
         @checked[rating] = "true"
       end
     end
-    logger.debug(@checked)
     @movies = Movie.all
-    from = params[:from]
-    @from = from == nil ? "" : from
-#logger.debug(params[:ratings].keys)
     keys = @checked.keys
+
+    # save curent session
+    session[:ratings] = @checked
+    session[:from] = @from
+
+    # return the movies
     @movies = Movie.where(:rating => keys).order(from)
   end
 
