@@ -6,8 +6,24 @@ class MoviesController < ApplicationController
     # will render app/views/movies/show.<extension> by default
   end
 
+
   def index
+#@movies = Movie.all
+    @all_ratings = Movie.all_ratings
+    @checked = params[:ratings]
+    if params[:ratings] == nil
+      @checked = {}
+      @all_ratings.each do |rating|
+        @checked[rating] = "true"
+      end
+    end
+    logger.debug(@checked)
     @movies = Movie.all
+    from = params[:from]
+    @from = from == nil ? "" : from
+#logger.debug(params[:ratings].keys)
+    keys = @checked.keys
+    @movies = Movie.where(:rating => keys).order(from)
   end
 
   def new
