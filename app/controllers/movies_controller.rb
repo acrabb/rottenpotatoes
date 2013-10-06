@@ -8,37 +8,68 @@ class MoviesController < ApplicationController
 
 
   def index
-#@movies = Movie.all
     @all_ratings = Movie.all_ratings
+    redirect = false
 
-    # get saved session states
-    @checked  = session[:ratings]
-    @from     = session[:from]
-    @from     = @from == nil ? "" : @from
-
-    checked = params[:ratings]
-    @checked = checked if checked != nil
-
-    from  = params[:from]
-    from  = from == nil ? "" : from
-    @from = from if from != ""
-
-    # create the hash if its nil
-    if @checked == nil
-      @checked = {}
-      @all_ratings.each do |rating|
-        @checked[rating] = "true"
-      end
+    # get params :from
+    @from = params[:from]
+    logger.debug(params)
+    logger.debug(session)
+    # if :from is nil check the session
+    if @from == nil
+        from = session[:from]
+      # if the session is not nil
+        if from != nil and from != ""
+          @from = from
+        # redirect is true
+          redirect = true
+          logger.debug("SHOULD REDIRECT 1")
+        else
+      # if the session is nil
+        # from should be empty string
+          @from = ""
+        end
+    # if :from is not nil
+    else
+      # write :from to session
+      session[:from] = @from
     end
-    @movies = Movie.all
-    keys = @checked.keys
 
-    # save curent session
-    session[:ratings] = @checked
-    session[:from] = @from
+    # get params :ratings
+    @checked  = params[:ratings]
+    # if :ratings is nil check the session
+    if @checked == nil
+      checked = session[:ratings]
+      # if the session is not nil
+      if checked != nil
+        @checked = checked
+        # redirect is true
+        redirect = true
+        logger.debug("SHOULD REDIRECT 2")
+      # if the session is nil
+      else
+        # check all boxes
+        @checked = {}
+        @all_ratings.each do |rating|
+          @checked[rating] = "true"
+        end
+      end
+    else
+    # if :ratings is not nil
+      # write :ratings to session
+      session[:ratings] = @checked
+    end
+
+
+    if redirect
+      logger.debug("REDIRECTED!!!")
+      flash.keep
+      redirect_to movies_path({:from => @from, :ratings => @checked})
+    end
 
     # return the movies
-    @movies = Movie.where(:rating => keys).order(from)
+    keys = @checked.keys
+    @movies = Movie.where(:rating => keys).order(@from)
   end
 
   def new
